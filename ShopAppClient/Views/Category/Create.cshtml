@@ -1,0 +1,22 @@
+﻿
+@{
+}
+
+@model ShopAppClient.Models.Category // Thay đổi thành namespace thực tế của bạn
+
+<h1>Thêm Category</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="CategoryName"></label>
+        <input asp-for="CategoryName" class="form-control" />
+        <span asp-validation-for="CategoryName" class="text-danger"></span>
+    </div>
+  
+    <div class="form-group">
+        <label asp-for="CategoryStatus"></label>
+        <input asp-for="CategoryStatus" type="checkbox" />
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>
